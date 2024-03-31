@@ -35,8 +35,8 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_deployment_reviewers"></a> [deployment\_reviewers](#input\_deployment\_reviewers) | Specify teams that may approve workflow runs when they access this environment | `list(string)` | `[]` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the environment | `string` | n/a | yes |
-| <a name="input_repository_id"></a> [repository\_id](#input\_repository\_id) | The ID of the GitHub repository | `string` | n/a | yes |
 | <a name="input_repository_name"></a> [repository\_name](#input\_repository\_name) | The name of the GitHub repository | `string` | n/a | yes |
 | <a name="input_trunk_branch"></a> [trunk\_branch](#input\_trunk\_branch) | The name of the trunk branch for the GitHub repository | `string` | `"main"` | no |
 

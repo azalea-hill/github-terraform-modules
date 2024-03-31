@@ -13,3 +13,9 @@ variable "trunk_branch" {
   type        = string
   default     = "main"
 }
+
+variable "deployment_reviewers" {
+  description = "Specify teams that may approve workflow runs when they access this environment"
+  type        = list(string)
+  default     = []
+}
