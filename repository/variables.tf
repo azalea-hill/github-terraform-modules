@@ -12,6 +12,7 @@ variable "name" {
 variable "description" {
   description = "The description of the repository"
   type        = string
+  default     = null
 }
 
 variable "visibility" {
