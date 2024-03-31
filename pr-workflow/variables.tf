@@ -3,26 +3,49 @@ variable "repository_id" {
   type        = string
 }
 
-variable "default_branch" {
-  description = "The default branch for the repository"
+variable "repository_name" {
+  description = "The name of the GitHub repository"
+  type        = string
+}
+
+variable "trunk_branch" {
+  description = "The name of the trunk branch for the GitHub repository"
   type        = string
   default     = "main"
 }
 
-variable "pull_request_workflow_admins" {
-  description = "List of users or teams that are allowed bypass branch protections"
-  type        = list(string)
-  default     = []
+variable "required_approving_review_count" {
+  description = "When enabled, pull requests targeting a matching branch require a number of approvals and no changes requested before they can be merged"
+  type        = number
+  default     = 1
 }
 
-variable "strict_branch_protection" {
-  description = "Require strict branch protections. Sets require_conversation_resolution, dismiss_stale_reviews, require_signed_commits, and require_last_push_approval to true"
+variable "dismiss_stale_reviews" {
+  description = "Dismiss stale pull request approvals when new commits are pushed"
   type        = bool
   default     = false
 }
 
-variable "branch_protection_review_count" {
-  description = "Require x number of approvals to satisfy branch protection requirements. If this is specified it must be a number between 0-6"
-  type        = number
-  default     = 1
+variable "require_last_push_approval" {
+  description = "Require approval of the most recent reviewable push"
+  type        = bool
+  default     = false
+}
+
+variable "require_signed_commits" {
+  description = "Require signed commits"
+  type        = bool
+  default     = true
+}
+
+variable "pull_request_bypassers" {
+  description = "Specify people, teams, or apps who are allowed to bypass required pull requests"
+  type        = list(string)
+  default     = []
+}
+
+variable "pull_request_pushers" {
+  description = "Specify people, teams, or apps allowed to push to matching branches. Required status checks will still prevent these people, teams, and apps from merging if the checks fail"
+  type        = list(string)
+  default     = []
 }
