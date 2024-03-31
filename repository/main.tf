@@ -26,19 +26,6 @@ resource "github_repository" "this" {
   allow_update_branch                     = true
 }
 
-# Import the default branch created by auto_init
-import {
-  id = github_repository.this.name
-  to = github_branch_default.this
-}
-
-# Make sure the default branch is set correctly
-resource "github_branch_default" "this" {
-  repository = github_repository.this.name
-  branch     = var.default_branch
-  rename     = true
-}
-
 # Dependabot security updates
 resource "github_repository_dependabot_security_updates" "this" {
   repository = github_repository.this.id
