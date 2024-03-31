@@ -6,7 +6,7 @@ resource "github_repository_environment" "this" {
   prevent_self_review = false
 
   reviewers {
-    teams = toset(var.deployment_reviewers)
+    users = toset(var.deployment_reviewers)
   }
 
   deployment_branch_policy {
