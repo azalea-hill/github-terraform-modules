@@ -1,3 +1,9 @@
+variable "default_branch" {
+  description = "The default branch for the organziation or account"
+  type        = string
+  default     = "main"
+}
+
 variable "name" {
   description = "The name of the repository"
   type        = string
