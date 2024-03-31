@@ -28,7 +28,6 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [github_branch_default.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_default) | resource |
 | [github_repository.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
 | [github_repository_dependabot_security_updates.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_dependabot_security_updates) | resource |
 
@@ -37,7 +36,6 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_archived"></a> [archived](#input\_archived) | Archive the repository | `bool` | `false` | no |
-| <a name="input_default_branch"></a> [default\_branch](#input\_default\_branch) | The default branch for the organziation or account | `string` | n/a | yes |
 | <a name="input_description"></a> [description](#input\_description) | The description of the repository | `string` | `null` | no |
 | <a name="input_gitignore_template"></a> [gitignore\_template](#input\_gitignore\_template) | The gitignore template to use for the repository | `string` | `null` | no |
 | <a name="input_license_template"></a> [license\_template](#input\_license\_template) | The license template to use for the repository | `string` | `null` | no |
