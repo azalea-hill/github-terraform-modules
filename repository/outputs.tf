@@ -10,5 +10,5 @@ output "name" {
 
 output "default_branch" {
   description = "The default branch of the repository"
-  value       = github_repository.this.default_branch
+  value       = github_branch_default.this.branch
 }
