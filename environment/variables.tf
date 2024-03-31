@@ -3,11 +3,6 @@ variable "name" {
   type        = string
 }
 
-variable "repository_id" {
-  description = "The ID of the GitHub repository"
-  type        = string
-}
-
 variable "repository_name" {
   description = "The name of the GitHub repository"
   type        = string
