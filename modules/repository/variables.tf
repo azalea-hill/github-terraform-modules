@@ -1,11 +1,3 @@
-variable "default_branch" {
-  # @todo: Find a way to not require this as a variable.
-  # The issue is that the repo is always created with the default branch set in the organization
-  # and there is no way to read the default branch from the organization.
-  description = "The default branch for the organziation or account"
-  type        = string
-}
-
 variable "name" {
   description = "The name of the repository"
   type        = string
