@@ -35,10 +35,10 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_deployment_reviewers"></a> [deployment\_reviewers](#input\_deployment\_reviewers) | Specify teams that may approve workflow runs when they access this environment | `list(string)` | `[]` | no |
+| <a name="input_branch_restriction_patterns"></a> [branch\_restriction\_patterns](#input\_branch\_restriction\_patterns) | Specify branch restrictions for the environment | `list(string)` | <pre>[<br>  "main"<br>]</pre> | no |
+| <a name="input_deployment_reviewers"></a> [deployment\_reviewers](#input\_deployment\_reviewers) | Specify users that may approve workflow runs when they access this environment | `list(string)` | `[]` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the environment | `string` | n/a | yes |
 | <a name="input_repository_name"></a> [repository\_name](#input\_repository\_name) | The name of the GitHub repository | `string` | n/a | yes |
-| <a name="input_trunk_branch"></a> [trunk\_branch](#input\_trunk\_branch) | The name of the trunk branch for the GitHub repository | `string` | `"main"` | no |
 
 ## Outputs
 

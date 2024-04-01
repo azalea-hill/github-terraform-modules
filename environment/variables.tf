@@ -8,14 +8,14 @@ variable "repository_name" {
   type        = string
 }
 
-variable "trunk_branch" {
-  description = "The name of the trunk branch for the GitHub repository"
-  type        = string
-  default     = "main"
-}
-
 variable "deployment_reviewers" {
   description = "Specify users that may approve workflow runs when they access this environment"
   type        = list(string)
   default     = []
+}
+
+variable "branch_restriction_patterns" {
+  description = "Specify branch restrictions for the environment"
+  type        = list(string)
+  default     = ["main"]
 }

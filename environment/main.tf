@@ -11,13 +11,14 @@ resource "github_repository_environment" "this" {
 
   deployment_branch_policy {
     protected_branches     = false
-    custom_branch_policies = true
+    custom_branch_policies = length(var.branch_restriction_patterns) > 0
   }
 }
 
 # Restrict the environment to the trunk branch
 resource "github_repository_environment_deployment_policy" "this" {
+  for_each       = toset(var.branch_restriction_patterns)
   environment    = github_repository_environment.this.environment
   repository     = github_repository_environment.this.repository
-  branch_pattern = var.trunk_branch
+  branch_pattern = each.value
 }
