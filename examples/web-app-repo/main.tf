@@ -3,7 +3,7 @@ provider "github" {
 }
 
 module "web_app_repo" {
-  source             = "../../repository"
+  source             = "../../modules/repository"
   name               = "web-app"
   description        = "An example web application repository"
   visibility         = "private"
@@ -11,7 +11,7 @@ module "web_app_repo" {
 }
 
 module "web_app_repo_pr_workflow" {
-  source                          = "../../pr-workflow"
+  source                          = "../../modules/pr-workflow"
   repository_id                   = module.web_app_repo.node_id
   required_approving_review_count = 1
   pull_request_bypassers          = ["/admin"]
@@ -19,7 +19,7 @@ module "web_app_repo_pr_workflow" {
 }
 
 module "web_app_prod_env" {
-  source                      = "../../environment"
+  source                      = "../../modules/environment"
   name                        = "production"
   repository_name             = module.web_app_repo.name
   deployment_reviewers        = [1234]
@@ -27,14 +27,14 @@ module "web_app_prod_env" {
 }
 
 module "web_app_staging_env" {
-  source                      = "../../environment"
+  source                      = "../../modules/environment"
   name                        = "staging"
   repository_name             = module.web_app_repo.name
   branch_restriction_patterns = ["feature/*"]
 }
 
 module "web_app_dev_env" {
-  source          = "../../environment"
+  source          = "../../modules/environment"
   name            = "development"
   repository_name = module.web_app_repo.name
 }
