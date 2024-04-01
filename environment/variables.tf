@@ -17,5 +17,5 @@ variable "deployment_reviewers" {
 variable "branch_restriction_patterns" {
   description = "Specify branch restrictions for the environment"
   type        = list(string)
-  default     = ["main"]
+  default     = []
 }
