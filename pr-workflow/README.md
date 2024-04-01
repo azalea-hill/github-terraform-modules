@@ -37,7 +37,7 @@ No modules.
 | <a name="input_dismiss_stale_reviews"></a> [dismiss\_stale\_reviews](#input\_dismiss\_stale\_reviews) | Dismiss stale pull request approvals when new commits are pushed | `bool` | `false` | no |
 | <a name="input_pull_request_bypassers"></a> [pull\_request\_bypassers](#input\_pull\_request\_bypassers) | Specify people, teams, or apps who are allowed to bypass required pull requests | `list(string)` | `[]` | no |
 | <a name="input_pull_request_pushers"></a> [pull\_request\_pushers](#input\_pull\_request\_pushers) | Specify people, teams, or apps allowed to push to matching branches. Required status checks will still prevent these people, teams, and apps from merging if the checks fail | `list(string)` | `[]` | no |
-| <a name="input_repository_id"></a> [repository\_id](#input\_repository\_id) | The ID of the GitHub repository | `string` | n/a | yes |
+| <a name="input_repository_id"></a> [repository\_id](#input\_repository\_id) | The name or node ID of the repository associated with this branch protection rule. | `string` | n/a | yes |
 | <a name="input_require_last_push_approval"></a> [require\_last\_push\_approval](#input\_require\_last\_push\_approval) | Require approval of the most recent reviewable push | `bool` | `false` | no |
 | <a name="input_require_signed_commits"></a> [require\_signed\_commits](#input\_require\_signed\_commits) | Require signed commits | `bool` | `true` | no |
 | <a name="input_required_approving_review_count"></a> [required\_approving\_review\_count](#input\_required\_approving\_review\_count) | When enabled, pull requests targeting a matching branch require a number of approvals and no changes requested before they can be merged | `number` | `1` | no |

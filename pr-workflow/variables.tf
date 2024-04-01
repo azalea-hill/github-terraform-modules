@@ -1,5 +1,5 @@
 variable "repository_id" {
-  description = "The ID of the GitHub repository"
+  description = "The name or node ID of the repository associated with this branch protection rule."
   type        = string
 }
 

@@ -18,7 +18,7 @@ The sections of this README between `BEGIN_TF_DOCS` and `END_TF_DOCS` are genera
 
 | Name | Version |
 |------|---------|
-| <a name="provider_github"></a> [github](#provider\_github) | >= 6.2 |
+| <a name="provider_github"></a> [github](#provider\_github) | 6.2.1 |
 
 ## Modules
 
@@ -46,6 +46,8 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_id"></a> [id](#output\_id) | The ID of the repository |
+| <a name="output_full_name"></a> [full\_name](#output\_full\_name) | A string of the form "orgname/reponame" |
 | <a name="output_name"></a> [name](#output\_name) | The name of the repository |
+| <a name="output_node_id"></a> [node\_id](#output\_node\_id) | GraphQL global node id for use with v4 API |
+| <a name="output_repo_id"></a> [repo\_id](#output\_repo\_id) | GitHub ID for the repository |
 <!-- END_TF_DOCS -->
