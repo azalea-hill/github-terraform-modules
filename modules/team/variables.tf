@@ -8,14 +8,14 @@ variable "description" {
   type        = string
 }
 
-variable "team_members" {
-  description = "The members of the team"
+variable "maintainers" {
+  description = "The maintainers of the team"
   type        = list(string)
   default     = []
 }
 
-variable "team_maintainers" {
-  description = "The maintainers of the team"
+variable "members" {
+  description = "The members of the team"
   type        = list(string)
   default     = []
 }

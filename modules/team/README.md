@@ -17,7 +17,9 @@ The sections of this README between `BEGIN_TF_DOCS` and `END_TF_DOCS` are genera
 
 ## Providers
 
-No providers.
+| Name                                                      | Version |
+| --------------------------------------------------------- | ------- |
+| <a name="provider_github"></a> [github](#provider_github) | 6.2.1   |
 
 ## Modules
 
@@ -25,14 +27,26 @@ No modules.
 
 ## Resources
 
-No resources.
+| Name                                                                                                                       | Type     |
+| -------------------------------------------------------------------------------------------------------------------------- | -------- |
+| [github_team.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team)                 | resource |
+| [github_team_members.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_members) | resource |
 
 ## Inputs
 
-No inputs.
+| Name                                                               | Description                 | Type           | Default | Required |
+| ------------------------------------------------------------------ | --------------------------- | -------------- | ------- | :------: |
+| <a name="input_description"></a> [description](#input_description) | The description of the team | `string`       | n/a     |   yes    |
+| <a name="input_maintainers"></a> [maintainers](#input_maintainers) | The maintainers of the team | `list(string)` | `[]`    |    no    |
+| <a name="input_members"></a> [members](#input_members)             | The members of the team     | `list(string)` | `[]`    |    no    |
+| <a name="input_name"></a> [name](#input_name)                      | The name of the team        | `string`       | n/a     |   yes    |
 
 ## Outputs
 
-No outputs.
+| Name                                                     | Description             |
+| -------------------------------------------------------- | ----------------------- |
+| <a name="output_node_id"></a> [node_id](#output_node_id) | The Node ID of the team |
+| <a name="output_slug"></a> [slug](#output_slug)          | The slug of the team    |
+| <a name="output_team_id"></a> [team_id](#output_team_id) | The ID of the team      |
 
 <!-- END_TF_DOCS -->
