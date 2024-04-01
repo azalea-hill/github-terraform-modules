@@ -9,9 +9,12 @@ resource "github_repository_environment" "this" {
     users = toset(var.deployment_reviewers)
   }
 
-  deployment_branch_policy {
-    protected_branches     = false
-    custom_branch_policies = length(var.branch_restriction_patterns) > 0
+  dynamic "deployment_branch_policy" {
+    for_each = length(var.branch_restriction_patterns) > 0 ? [1] : []
+    content {
+      protected_branches     = false
+      custom_branch_policies = true
+    }
   }
 }
 
