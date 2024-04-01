@@ -1,3 +1,7 @@
+# Example module usage for a web app repo
+
+This example creates the repository, trunk-based PR workflow with branch protections, as well as dev, stage, and prod environments with appropriate deployment restrictions and approval workflow.
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
