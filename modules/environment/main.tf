@@ -38,7 +38,7 @@ resource "github_actions_environment_variable" "this" {
 
 # Environment secrets
 resource "github_actions_environment_secret" "this" {
-  for_each        = var.variables
+  for_each        = var.secrets
   repository      = var.repository_name
   environment     = github_repository_environment.this.environment
   secret_name     = each.key
