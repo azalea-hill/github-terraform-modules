@@ -31,3 +31,9 @@ variable "archived" {
   type        = bool
   default     = false
 }
+
+variable "variables" {
+  description = "GitHub Actions variables to set on the repository"
+  type        = map(string)
+  default     = {}
+}
