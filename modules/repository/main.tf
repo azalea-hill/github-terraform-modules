@@ -35,7 +35,7 @@ resource "github_repository_dependabot_security_updates" "this" {
 # Repository variables
 resource "github_actions_variable" "this" {
   for_each      = var.variables
-  repository    = data.github_repository.this.id
+  repository    = github_repository.this.id
   variable_name = each.key
   value         = each.value
 }
