@@ -47,6 +47,6 @@ resource "github_actions_secret" "this" {
   secret_name     = each.key
   plaintext_value = each.value
   lifecycle {
-    ignore_changes = [value]
+    ignore_changes = [plaintext_value]
   }
 }
