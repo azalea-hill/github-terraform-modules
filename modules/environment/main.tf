@@ -6,7 +6,8 @@ resource "github_repository_environment" "this" {
   prevent_self_review = false
 
   reviewers {
-    users = toset(var.deployment_reviewers)
+    users = toset(var.deployment_reviewers_users)
+    teams = toset(var.deployment_reviewers_teams)
   }
 
   dynamic "deployment_branch_policy" {
@@ -24,4 +25,25 @@ resource "github_repository_environment_deployment_policy" "this" {
   environment    = github_repository_environment.this.environment
   repository     = github_repository_environment.this.repository
   branch_pattern = each.value
+}
+
+# Environment variables
+resource "github_actions_environment_variable" "this" {
+  for_each      = var.variables
+  repository    = var.repository_name
+  environment   = github_repository_environment.this.environment
+  variable_name = each.key
+  value         = each.value
+}
+
+# Environment secrets
+resource "github_actions_environment_secret" "this" {
+  for_each        = var.secrets
+  repository      = var.repository_name
+  environment     = github_repository_environment.this.environment
+  secret_name     = each.key
+  plaintext_value = each.value
+  lifecycle {
+    ignore_changes = [plaintext_value]
+  }
 }

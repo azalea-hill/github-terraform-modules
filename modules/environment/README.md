@@ -18,7 +18,7 @@ The sections of this README between `BEGIN_TF_DOCS` and `END_TF_DOCS` are genera
 
 | Name | Version |
 |------|---------|
-| <a name="provider_github"></a> [github](#provider\_github) | 6.2.1 |
+| <a name="provider_github"></a> [github](#provider\_github) | >= 6.2 |
 
 ## Modules
 
@@ -28,6 +28,8 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [github_actions_environment_secret.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_environment_secret) | resource |
+| [github_actions_environment_variable.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_environment_variable) | resource |
 | [github_repository_environment.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_environment) | resource |
 | [github_repository_environment_deployment_policy.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_environment_deployment_policy) | resource |
 
@@ -36,9 +38,12 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_branch_restriction_patterns"></a> [branch\_restriction\_patterns](#input\_branch\_restriction\_patterns) | Specify branch restrictions for the environment | `list(string)` | `[]` | no |
-| <a name="input_deployment_reviewers"></a> [deployment\_reviewers](#input\_deployment\_reviewers) | Specify users that may approve workflow runs when they access this environment | `list(string)` | `[]` | no |
+| <a name="input_deployment_reviewers_teams"></a> [deployment\_reviewers\_teams](#input\_deployment\_reviewers\_teams) | Specify teams that may approve workflow runs when they access this environment | `list(string)` | `[]` | no |
+| <a name="input_deployment_reviewers_users"></a> [deployment\_reviewers\_users](#input\_deployment\_reviewers\_users) | Specify users that may approve workflow runs when they access this environment | `list(string)` | `[]` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the environment | `string` | n/a | yes |
 | <a name="input_repository_name"></a> [repository\_name](#input\_repository\_name) | The name of the GitHub repository | `string` | n/a | yes |
+| <a name="input_secrets"></a> [secrets](#input\_secrets) | GitHub Actions secrets to set on the environment | `map(string)` | `{}` | no |
+| <a name="input_variables"></a> [variables](#input\_variables) | GitHub Actions variables to set on the environment | `map(string)` | `{}` | no |
 
 ## Outputs
 

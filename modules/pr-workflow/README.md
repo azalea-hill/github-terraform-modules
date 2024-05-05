@@ -18,7 +18,7 @@ The sections of this README between `BEGIN_TF_DOCS` and `END_TF_DOCS` are genera
 
 | Name | Version |
 |------|---------|
-| <a name="provider_github"></a> [github](#provider\_github) | 6.2.1 |
+| <a name="provider_github"></a> [github](#provider\_github) | >= 6.2 |
 
 ## Modules
 
