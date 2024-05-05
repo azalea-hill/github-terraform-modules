@@ -31,7 +31,7 @@ resource "github_repository_environment_deployment_policy" "this" {
 resource "github_actions_environment_variable" "this" {
   for_each      = var.variables
   repository    = var.repository_name
-  environment   = github_repository_environment.this
+  environment   = github_repository_environment.this.environment
   variable_name = each.key
   value         = each.value
 }
@@ -40,7 +40,7 @@ resource "github_actions_environment_variable" "this" {
 resource "github_actions_environment_secret" "this" {
   for_each        = var.variables
   repository      = var.repository_name
-  environment     = github_repository_environment.this
+  environment     = github_repository_environment.this.environment
   secret_name     = each.key
   plaintext_value = each.value
   lifecycle {
