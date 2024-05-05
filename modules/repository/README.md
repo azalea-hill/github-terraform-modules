@@ -28,6 +28,8 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [github_actions_secret.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_secret) | resource |
+| [github_actions_variable.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_variable) | resource |
 | [github_repository.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
 | [github_repository_dependabot_security_updates.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_dependabot_security_updates) | resource |
 
@@ -40,6 +42,8 @@ No modules.
 | <a name="input_gitignore_template"></a> [gitignore\_template](#input\_gitignore\_template) | The gitignore template to use for the repository | `string` | `null` | no |
 | <a name="input_license_template"></a> [license\_template](#input\_license\_template) | The license template to use for the repository | `string` | `null` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the repository | `string` | n/a | yes |
+| <a name="input_secrets"></a> [secrets](#input\_secrets) | GitHub Actions secrets to set on the repository | `map(string)` | `{}` | no |
+| <a name="input_variables"></a> [variables](#input\_variables) | GitHub Actions variables to set on the repository | `map(string)` | `{}` | no |
 | <a name="input_visibility"></a> [visibility](#input\_visibility) | The visibility of the repository | `string` | n/a | yes |
 
 ## Outputs
