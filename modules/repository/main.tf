@@ -39,3 +39,14 @@ resource "github_actions_variable" "this" {
   variable_name = each.key
   value         = each.value
 }
+
+# Repository secrets
+resource "github_actions_secret" "this" {
+  for_each        = var.secrets
+  repository      = github_repository.this.id
+  secret_name     = each.key
+  plaintext_value = "SECRET"
+  lifecycle {
+    ignore_changes = [value]
+  }
+}
