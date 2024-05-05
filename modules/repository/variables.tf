@@ -39,7 +39,7 @@ variable "variables" {
 }
 
 variable "secrets" {
-  description = "GitHub Actions secret keys to create in the repository"
-  type        = list(string)
-  default     = []
+  description = "GitHub Actions secrets to set on the repository"
+  type        = map(string)
+  default     = {}
 }
