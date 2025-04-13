@@ -11,14 +11,14 @@ The sections of this README between `BEGIN_TF_DOCS` and `END_TF_DOCS` are genera
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.7 |
-| <a name="requirement_github"></a> [github](#requirement\_github) | >= 6.2 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.11 |
+| <a name="requirement_github"></a> [github](#requirement\_github) | >= 6.6 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_github"></a> [github](#provider\_github) | >= 6.2 |
+| <a name="provider_github"></a> [github](#provider\_github) | >= 6.6 |
 
 ## Modules
 

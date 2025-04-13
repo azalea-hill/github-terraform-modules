@@ -38,8 +38,3 @@ variable "variables" {
   default     = {}
 }
 
-variable "secrets" {
-  description = "GitHub Actions secrets to set on the repository"
-  type        = map(string)
-  default     = {}
-}
